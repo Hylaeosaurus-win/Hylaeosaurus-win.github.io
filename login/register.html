@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh"><!--中文简体-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>容貌焦虑|注册</title>
+	<link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+    <!--表单区域框-->
+    <div class="container">
+        <!-- 注册页面 -->
+        <div class="formContainer">
+            <form action="#">
+				<h2>你的容貌不是别人的景观</h2>
+                <input type="text" id="username" maxlength="16" required="required" pattern="[0-9A-Za-z]{8,16}" title="由8-16位数字或字母组成" placeholder="请输入手机号" autofocus  size="25"/>
+				<input type="text" id="email" placeholder="请输入注册邮箱"/>
+				<input type="password" id="pin" maxlength="16" required="required" pattern="[0-9A-Za-z]{8,16}" title="由8-16位数字或字母组成" placeholder="请输入密码" size="25"/>
+				<input type="password" id="re" maxlength="16" required="required" pattern="[0-9A-Za-z]{8,16}" title="由8-16位数字或字母组成" placeholder="确认密码" size="25"/>
+				<input type="submit" class="btn" value="注册"/>
+				<div class="link">
+					<a href="../index.html">返回登录</a>
+				</div>
+            </form>
+        </div>
+		<!--右侧区域-->
+		<div class="leftContainer">
+			<h1>欢迎注册</h1>
+			<p>
+				你的容貌不是别人的景观
+			</p>
+		</div>
+    </div>
+</body>
+</html>
