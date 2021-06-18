@@ -1,3 +1,37 @@
-<p>Hello 大家好</p>
-<p>我们是Hylaeosaurus-win，这是我们的网站。 </p>
-<p>很高兴你来到这里</p>
+<!DOCTYPE html>
+<html lang="zh"><!--中文简体-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>容貌焦虑|登录</title>
+	<link rel="stylesheet" href="css/url.css">
+</head>
+<body>
+	<div class="header">
+		<h2>
+				你的容貌不是别人的景观
+		</h2>
+	</div>
+	<!--表单区域框-->
+	<div class="form">
+		<div class="logo">
+			<img src="img/logo.png" alt="logo" width="300" >
+		</div>
+		<!--创建表单-->
+		<form method="post" action="#" class="login">
+			<h2>登录</h2>
+			<input type="text" id="username" maxlength="16" required="required" pattern="[0-9A-Za-z]{8,16}" title="由8-16位数字或字母组成" placeholder="用户名" autofocus  size="25"/>
+			<input type="password" id="pin" maxlength="16" required="required" pattern="[0-9A-Za-z]{8,16}" title="由8-16位数字或字母组成" placeholder="密码" size="25"/>
+			<input type="submit" class="btn" value="登 录"/>
+			<div class="link">
+				<a href="login/register.html">注册账户</a>
+				<a href="login/reset.html">忘记密码</a>
+			</div>
+			<div class="link">
+				<a href="#">跳过登录</a>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
