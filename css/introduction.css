@@ -1,0 +1,255 @@
+@charset "utf-8";
+            * {
+				margin:0;
+				padding:0;
+				}
+			html {height: 100%;} /*背景占据页面的可见区域*/
+			body{
+				margin: 0;
+				height: 100%;
+				padding: 0;
+			}
+			a:hover,a:active {
+				background-color:transparent;}/*鼠标样式*/
+			.main{
+				width: 100%;
+			}/*主要内容区域*/
+			.banner{
+				width: 100%;
+				height: 760px;
+				background: url("../201918340302-chenshengying-1501/img/bg.jpg");
+				background-size: cover;
+				background-attachment: fixed;
+			}/*图片背景区域样式*/
+			.content{
+				width: 100%;
+				text-align: center;
+				background: #fbfcfc;
+				min-height: 1070px;
+				background-color: #8E9AAF;
+				margin:0;			
+			}/*纯色背景区域div样式*/
+			header{
+				width: 100%;
+				height: 90px;
+				position: absolute;
+				border-bottom: 0.5px solid #999999;
+			}/*导航栏区域div样式*/
+			ul {
+				list-style: none;
+				margin-top: 100px;
+				padding: 0px;
+				border: 0px;
+				margin-left:300px;
+			}
+			a {
+				text-decoration: none;
+			}
+			nav{
+				width: 100%;
+				list-style: none;
+				margin: 0px;
+				padding: 0px;
+				border: 0px;
+				z-index: 999;
+			}
+			 nav ul{
+				margin: auto;
+				padding: 0;
+				list-style: none;
+				width: 50%;
+			}
+			nav ul>li{
+				float:left;
+				color:#000000;
+				height:80px;
+				margin-top:10px;
+				line-height: 80px;
+				font-size: 18px;
+				text-align:center; 
+			}
+		    nav ul li a {
+						display: block;
+						width: 120px;
+						height: 50px;
+						line-height: 60px;
+						color:#FFFfFE;
+						}
+			nav.sticky{
+				position: fixed;
+				background:rgba(162,163,165,0.5);
+				visibility: hidden;
+				box-shadow: 0 0 10px 1px #000000;
+				text-align:center;
+			}
+			nav.sticky ul>li{
+				color: #000000;
+				height: 60px;
+				line-height: 60px;
+				vertical-align: middle;
+				font-size: 18px; 
+			}/*滚动高度大于190时导航栏的样式*/
+			nav.offset{
+				transform: translate(0,-100%);
+				transition: all 0.5s ease-in-out;
+			}
+			nav.scrolling{
+				visibility: visible;
+				transform: translate(0,0);
+			}/*柔和过渡效果*/
+			.logo{
+				   width: auto;
+				   height: 20px;
+				   float:left;
+				   margin-left: 15px;
+				   margin-top: 1px;/*logo部分样式*/
+			    }
+			#mainHeading{
+				width: 100%;
+				height: 20px;
+				border:1px solid transparent;
+			}/*图片背景区域主标题文字框*/
+			.headline {
+				color: #FFFFFF;
+				margin-top: 250px;
+				text-align:center;
+				font-size: 120px;
+				letter-spacing: 5px;
+				font-weight: 700; 
+			}/*图片背景区域标题文字样式*/
+			.caption {
+				color: #FFFFFF;
+				padding-left: 150px;
+				text-align:left;
+				font-size: 155px; 
+			}/*图片背景区域标题文字样式*/
+			.box{
+    			width: 60%;
+				display: inline-block;
+    			height: 340px;
+				border: 1px solid transparent;		
+   			    overflow: hidden;
+				margin-top: 20px;
+			} /*动画区域*/
+			.track{
+				height: 30px;
+				height: 40px;
+				line-height: 40px;
+				padding-top: 10px;
+				margin-bottom: 5px;
+				border: 1px solid transparent;
+			} /*轨道样式*/
+			.child{
+				width: 100%;
+				line-height: 20px;
+				margin-bottom: 10px;
+			} /*动画效果*/
+			.child-purple{
+				color:#C1BFD3; 
+				font-size: 30px;
+				transform: translateX(800px);  /*文字起始位置*/ 
+				animation: scrollTo linear 15s infinite; 
+			}  /*第一个动画*/
+			.child-yellow{
+				color:#DEE2FF;
+				font-size: 30px;
+				transform: translateX(500px); 
+				animation: scrollTo linear 27s infinite; 
+			}  /*第二个动画*/
+			.child-red{
+				color:#D7D7C3;
+				font-size: 25px;
+				transform: translateX(800px); 
+				animation: scrollTo linear 30s infinite; 
+			} /*第三个动画*/
+			.child-orange{
+				color:#FFEAFB; 
+				font-size: 30px;
+				transform: translateX(600px);  /*文字起始位置*/ 
+				animation: scrollTo linear 20s infinite; 
+			}  /*第四个动画*/
+			.child-pink{
+				color:#D7CAC3;
+				font-size: 22px;
+				transform: translateX(500px); 
+				animation: scrollTo linear 27s infinite; 
+			}  /*第五个动画*/
+			.child-green{
+				color:#F0D3D7;
+				font-size: 23px;
+				transform: translateX(800px); 
+				animation: scrollTo linear 11s infinite; 
+			} /*第六个动画*/
+			@keyframes scrollTo {
+				to{
+					transform: translateX(-750px); /*移动尺寸*/
+				}
+			} 
+			#picture{
+				width: 70%;
+				height: 300px;
+				display: inline-block;
+				border:1px solid transparent;
+				padding-top: 25px;
+			} /*图像区域*/
+			.container {
+				border:1px solid transparent;
+				float: left;
+				position: relative;
+				width: 18%;
+				height: 220px;
+				margin:27px;
+			}  /*文本的范围矩形*/
+			.image {
+				display: inline-block;
+				width: 70%;
+				height: auto;
+			}  /*图像样式*/
+			.overlay {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				height: 100%;
+				width: 100%;
+				opacity: 0;
+				transition: .5s ease;
+				background-color:#A2A3A5;
+				border-radius:10px;
+				box-shadow: 5px 5px 10px #000;
+			}  /*淡入后样式*/
+			.container:hover .overlay {
+				opacity: 0.9;
+			} /*淡入完成后样式*/
+			.text {
+				color: white;
+				font-size: 20px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				-ms-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+			} /*图像中文本样式*/
+			.section{
+				display: inline-block;
+				width: 65%;
+				height:135px;
+				border:1px solid transparent;
+				font-size: 16px;
+				line-height:2;
+				text-align: justify;
+				text-indent:2em;
+				color: white;
+			}  /*正文样式*/
+			#footer{
+				border:1px solid ;
+				text-align:center;
+				height:15px;
+				width:100%;
+				color:#767676;
+				font-size:10px;
+				font-family:Arial;
+				padding:20px;
+				clear:both;
+			}  /*页脚样式*/

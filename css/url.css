@@ -1,0 +1,103 @@
+@charset "utf-8";
+/* CSS Document */
+/* 不能选中*/
+*{
+	user-select: none;}
+/*背景主体*/
+body{
+	background: url("../img/bg.jpg") no-repeat;
+	background-size: cover;
+	background-attachment: fixed;}
+/*页眉*/
+.header h2{
+	font-weight:700;
+	text-align: center;
+	color:#F5F5F5;}
+/*logo区域*/
+.logo{
+	text-align: center;
+	transform: translateY(-40%);}
+/*登录的样式*/
+.login{
+	position: absolute;
+	top: 55%;
+	margin-top: -150px;
+	left: 50%;
+	margin-left: -200px;
+	background-color: whitesmoke;
+	width: 400px;
+	height: 450px;
+	border-radius: 25px;
+	text-align: center;
+	padding: 5px 40px;
+	box-sizing: border-box;
+	box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
+	}
+h2{
+	font-size: 42px;
+	font-weight: 600;
+	color:#BD92A0}
+input{
+	background-color:transparent;
+	width: 80%;
+	height: 48px;
+	margin: 8px 0;
+	border: none;
+	border-bottom: 2px solid silver;
+	outline: none;/*覆盖*/
+	font-size:16px;
+	font-family: YouYuan;
+	padding:0 25px;
+	transition: all .65s ease-in-out;/*过渡样式*/}
+/*框内图标*/
+#username{ 
+	background-image:url("../img/username.svg");
+	background-size: 20px;
+	background-repeat:no-repeat;
+	background-position:left;}
+#pin{
+	background-image:url("../img/pin.svg");
+	background-size: 20px;
+	background-repeat:no-repeat;
+	background-position:left;}
+/*登录按钮样式*/
+.btn{
+	background-color:#968786;
+	width: 38%;
+	height: 48px;
+	border-radius: 8px;
+	margin-top: 40px;
+	font-size: 28px;
+	font-weight: 600;
+	color: white;
+	cursor: pointer;}
+/*登录按钮点后样式*/
+.btn:hover{
+	background-color:#867D85;}
+/*底部链接样式*/
+.link {
+	margin-top: 6px;
+	color:#757575;
+	letter-spacing: 1px;
+	font-family: YouYuan;
+	cursor: pointer;}
+.link a {
+	color: #757575;
+	font-weight: normal;
+	text-decoration: none;}
+/*表单框架样式*/
+.form{
+	height:500px;}
+/*页脚框样式*/
+.footer{
+	margin-top: 120px;
+	margin-bottom: 20px;
+	background-color:#8D9A9E;
+	width: 100%;
+	height: 20px;}
+/*页脚内容样式*/
+.footer footer {
+	color:white;
+	text-align:center;
+	font-size:13px;
+	letter-spacing:1px;}

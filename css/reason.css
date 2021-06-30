@@ -1,0 +1,259 @@
+@charset "utf-8";
+            * {
+				margin:0;
+				padding:0;
+				}
+			html {height: 100%;} /*背景占据页面的可见区域*/
+			body{
+				margin: 0;
+				height: 100%;
+				padding: 0;
+			}
+			a:hover,a:active {background-color:transparent;}/*鼠标样式*/
+			.main{
+				width: 100%;
+			}/*主要内容区域*/
+			.banner{
+				width: 100%;
+				height: 760px;
+				background: url("../201918340302-chenshengying-1501/img/reason.jpg");
+				background-size: cover;
+				background-attachment: fixed;
+			}/*图片背景区域样式*/
+			.content{
+				width: 100%;
+				text-align: center;
+				background: #fbfcfc;
+				min-height: 4250px;
+				background-color: #8E9AAF;
+				margin:0;
+			}/*纯色背景区域div样式*/
+			header{
+				width: 100%;
+				height: 90px;
+				position: absolute;
+				border-bottom: 0.5px solid #999999;
+			}/*导航栏区域div样式*/
+			ul {
+				list-style: none;
+				margin-top: 100px;
+				padding: 0px;
+				border: 0px;
+				margin-left:300px;
+			}
+			a {
+				text-decoration: none;
+			}
+			nav{
+				width: 100%;
+				list-style: none;
+				margin: 0px;
+				padding: 0px;
+				border: 0px;
+				z-index: 999;
+			}
+			 nav ul{
+				margin: auto;
+				padding: 0;
+				list-style: none;
+				width: 50%;
+			}
+			nav ul>li{
+				float:left;
+				color:#000000;
+				height:80px;
+				margin-top:10px;
+				line-height: 80px;
+				font-size: 18px;
+				text-align:center; 
+			}
+		   nav ul li a {
+						display: block;
+						width: 120px;
+						height: 50px;
+						line-height: 60px;
+						color:#FFFfFE;
+						}
+			nav.sticky{
+				position: fixed;
+				background:rgba(162,163,165,0.5);
+				visibility: hidden;
+				box-shadow: 0 0 10px 1px #000000;
+				text-align:center;
+			}
+			nav.sticky ul>li{
+				color: #000000;
+				height: 60px;
+				line-height: 60px;
+				vertical-align: middle;
+				font-size: 18px; 
+			}/*滚动高度大于190时导航栏的样式*/
+			nav.offset{
+				transform: translate(0,-100%);
+				transition: all 0.5s ease-in-out;
+			}
+			nav.scrolling{
+				visibility: visible;
+				transform: translate(0,0);
+			}/*柔和过渡效果*/
+			.logo{
+				   width: auto;
+				   height: 20px;
+				   float:left;
+				   margin-left: 15px;
+				   margin-top: 1px;/*logo部分样式*/
+			    }			
+			.title {
+				width: 100%;
+				height: 500px;
+				border:1px solid transparent;
+				color: #FFFFFF;
+				text-align:left;
+				font-size: 120px; 
+				padding-top: 200px;
+				padding-left: 80px;
+				letter-spacing: 5px;
+				font-weight: 700;
+			}/*图片背景区域主标题文字样式*/
+			#section{
+				width: 65%;
+				height:150px;
+				border:1px solid transparent;
+				display: inline-block;
+			}  /*总结性段区域*/
+			h3{
+				color: #CBC0D3;
+				font-weight: normal;
+				padding: 20px;
+				text-align: center;
+				width: 60%;
+				height: 20px;
+				border:1px solid transparent;
+				display: inline-block;
+			}  /*图表标题样式*/
+			#pyramid{
+				width: 60%;
+				height: 580px;
+				border:1px solid transparent;
+				display: inline-block;
+			}  /*金字塔图表区域*/
+			#explore{
+				width: 65%;
+				height:220px;
+				border:1px solid transparent;
+				display: inline-block;
+			}  /*词云上方区域*/		
+			.paragraph{
+				font-size: 16px;
+				line-height: 2;
+				text-align: justify;
+				text-indent:2em;
+				color: white;
+				padding-top: 20px;
+			}  /*正文样式*/
+			h2{
+				font-size: 28px;
+				letter-spacing: 5px;
+				padding-top: 35px;
+				text-align:center;
+				border:1px solid transparent;
+				color:#F0D3D7;
+				font-weight: normal;
+			}  /*总结小标题样式*/
+			#cloud-paragraph{
+				width: 65%;
+				height:560px;
+				border:1px solid transparent;
+				display: inline-block;
+			} /*第二点总图文区域*/
+			.speak-paragraph{
+				width: 65%;
+				height:270px;
+				border:1px solid transparent;
+				display: inline-block;
+				margin-top: 20px;
+			}  /*第二点下半部分*/
+			#picture-paragraph{
+				width: 65%;
+				height:250px;
+				border:1px solid transparent;
+				display: inline-block;
+			}  /*第三点文字区域*/
+			.girl{
+				width: 32%;
+				height:380px;
+				border:1px solid transparent;
+				float: left;
+				margin-left: 220px;
+				margin-top: 30px;
+				margin-bottom: 20px;
+			}  /*词云区域*/
+			.boy{
+				width: 32%;
+				height:380px;
+				border:1px solid transparent;
+				float: right;
+				margin-right: 220px;
+				margin-top: 30px;
+				margin-bottom: 20px;
+			}  /*词云区域*/
+			#sector{
+				width: 60%;
+				height:480px;
+				border:1px solid transparent;
+				display: inline-block;
+			}  /*柱形图区域*/
+			#speak{
+				overflow: auto;
+				outline: thick double #F0D3D7;
+				width: 40%;
+				height: 250px;
+				margin-top: 50px;
+			}  /*说话区域*/
+			.people{
+				width: 40%;
+				height: 280px;
+				border:1px solid transparent;
+				float: left;
+				margin-left: 100px;
+				margin-top: 30px;
+				padding-top: 10px;
+			}  /*人物区域*/
+			.people img{
+				border-radius: 50%;
+			}  /*人物图片样式*/
+			.gather{
+				width: 100%;
+				height: 450px;
+				border:1px solid transparent;
+				display: inline-block;
+				margin-top: 20px;
+			}  /*图集区域*/
+			.gather img{
+				box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
+			}  /*图集样式*/
+			#footer{
+				border:1px solid transparent;
+				text-align:center;
+				height:80px;
+				width:100%;
+				color:#767676;
+				font-size:10px;
+				font-family:Arial;
+				padding:20px;
+				clear:both;
+			}  /*页脚样式*/
+             .source{
+				color: #757A86;
+				font-size: 10px;
+				width: 40%;
+				float: right;
+				margin-right: 10%;	
+				padding-top: 0;
+			}  /*数据来源样式*/
+			#line{
+				width: 60%;
+				height: 450px;
+				border:1px solid transparent;
+				display: inline-block;
+			}  /*折线图区域*/
