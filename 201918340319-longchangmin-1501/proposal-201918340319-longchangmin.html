@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<link href="../css/proposal.css" rel="stylesheet">
+		<!-- 引入 echarts.js -->
+		<script src="../js/echarts.min.js"></script>
+		<title>你本来就很美</title><!--网页标题-->
+	</head>
+	<body>
+		<div class="main">
+			 <header>
+				<div class="logo">
+				<img src="img/logo.png" alt="网站logo" width="250"  height="80"><!--网站logo-->
+			    </div>
+				<nav class="navigation">
+					<ul>
+					<li><a href="../index.html">登录</a></li><!--导航栏区域-->
+                    <li><a href="../201918340302-chenshengying-1501/introduction-201918340302-chenshengying.html">介绍</a></li>
+                    <li><a href="../201918340318-linsiqi-1501/current-201918340318-linsiqi.html">现状</a></li>
+					<li><a href="../201918340302-chenshengying-1501/reason-201918340302-chenshengying.html">原因</a></li>
+					<li><a href="proposal-201918340319-longchangmin.html">建议</a></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="banner">
+				<h1 class="title"><!--内容标题-->
+					你本来就很美
+				</h1>
+			</div>
+			<div class="content"><!--主要内容-->
+			<p class="smalltitle">寻求方法缓解焦虑</p>
+			  <p class="artilceText">每个人都有认为一件事物美或不美的权利，但请从狭隘中挣脱，怀有一颗包容的心，包容不同的审美，包容不同的表达，不要让容貌焦虑继续蔓延我们不可能完全忽视自身的缺陷，每个人都有自己的长处和短处。我们要正视自己的不足，敢于面对有“缺陷”的自己，积极接受自己的不足。同时要努力发展自己的优势，通过发扬自己的长处来弥补自身的不足，去积极寻求方法，缓解自身的焦虑，让自己变得优秀且自信。</p>
+				<p class="formTitle">大学生认为缓解焦虑方法</p>
+			  <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="advice"></div>
+    <script>
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('advice'));
+
+        // 指定图表的配置项和数据
+        var option = {
+			tooltip: {},
+            toolbox: {
+								feature: {
+									dataView: {show: true, readOnly: false},
+									saveAsImage: {show: true}
+								}
+							},
+
+            legend: {
+                data:['占比']
+            },
+            xAxis: {
+                data: ["坚持运动","充足睡眠","调整心态","放弃攀比","药物治疗","医学整形"]
+            },
+            yAxis: {
+				axisLabel: {
+										formatter: '{value} %'
+									},
+			},
+            series: [{
+                name: '占比',
+                type: 'bar',
+                data: [78.01, 64.75, 63.82, 19.74, 5.25, 4.83],
+				itemStyle:{
+					normal:{
+						color:'#CBC0D3'
+					}
+				},
+				label:{ 
+					normal:{ 
+						show: true, 
+						position: 'insideTop'} 
+						}
+            }]
+        };
+        myChart.setOption(option);
+    </script>
+				
+				<p class="source">数据来源：当代青年焦虑报告<sup>[3]</sup></p>
+				<div class="smalltitle">
+				<p >积极运动与社交</p>
+				</div>
+				<p class="artilceText">人们运动频率越高、社交频率越高、网络使用时间越少，焦虑水平越低。在每天都运动的人群中，只有20.96%的人客观焦虑水平为高，而在从不运动的人群中，这个比例几乎是前者的两倍，达39.56%；同样的，在每天都有社交活动的人群中，客观焦虑水平为高的人占23.59%，而从不参与社交活动的人则有39.11%焦虑水平为高。大量研究证实，体育活动和锻炼对减少焦虑有积极的帮助；网络使用时间与焦虑水平也被证实有正向联系。</p>
+				<p class="formTitle">社交活动与焦虑的关系</p>
+				 <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="level"></div>
+    <script>
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('level'));
+
+        // 指定图表的配置项和数据
+        var option;
+
+		option = {
+			tooltip: {
+				trigger: 'axis',
+				axisPointer: {            
+					type: 'shadow'        
+				}
+			},
+			toolbox: {
+								feature: {
+									dataView: {show: true, readOnly: false},
+									saveAsImage: {show: true}
+								}
+							},
+
+			color:['#DEE2FF', '#FEEAFA', '#EFD3D7'],
+			legend: {
+				data: ['低焦虑水平', '中焦虑水平', '高焦虑水平']
+			},
+			grid: {
+				left: '3%',
+				right: '4%',
+				bottom: '3%',
+				containLabel: true
+			},
+			xAxis: {
+				type: 'value',
+				axisLabel: {
+										formatter: '{value} %'
+									},
+			},
+			yAxis: {
+				type: 'category',
+				data: ['从不', '1个月或更久', '2-3周', '每周', '4-5天', '2-3天', '每天']
+			},
+			series: [
+				{
+					name: '低焦虑水平',
+					type: 'bar',
+					stack: 'total',
+					label: {
+						show: true
+					},
+					emphasis: {
+						focus: 'series'
+					},
+					data: [4.63, 5.49, 7.46, 8.08, 7.89, 9.92, 14.36]
+				},
+				{
+					name: '中焦虑水平',
+					type: 'bar',
+					stack: 'total',
+					label: {
+						show: true
+					},
+					emphasis: {
+						focus: 'series'
+					},
+					data: [56.26, 64.00, 68.41, 68.50, 69.52, 67.98, 62.05]
+				},
+				{
+					name: '高焦虑水平',
+					type: 'bar',
+					stack: 'total',
+					label: {
+						show: true
+					},
+					emphasis: {
+						focus: 'series'
+					},
+					data: [39.11, 30.51, 24.12, 23.42, 22.59, 22.10, 23.59]
+				}
+			]
+		};
+
+
+        myChart.setOption(option);
+    </script>
+				<div class="source">
+					<p>数据来源：当代青年焦虑报告<sup>[3]</sup></p>
+				</div>
+				<div class="artilce">
+				<p class="artilceText">积极运动，保持对生活的热爱。“生命在于运动”，通过适当的运动，我们能够舒缓身心从而缓解自身的焦虑。适当的运动还可以转移我们的注意力，从而将烦恼抛之脑后，感受生命的律动，使大脑得到真正的放松。
+				</p>
+				</div>
+				<p class="formTitle">运动与焦虑的关系</p>
+				 <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="movement"></div>
+    <script>
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('movement'));
+
+        // 指定图表的配置项和数据
+        var option;
+
+		option = {
+			tooltip: {
+				trigger: 'axis',
+				axisPointer: {            // Use axis to trigger tooltip
+					type: 'shadow'        // 'shadow' as default; can also be 'line' or 'shadow'
+				}
+			},
+			toolbox: {
+								feature: {
+									dataView: {show: true, readOnly: false},
+									saveAsImage: {show: true}
+								}
+							},
+
+			color:['#DEE2FF', '#FEEAFA', '#EFD3D7'],
+			legend: {
+				data: ['低焦虑水平', '中焦虑水平', '高焦虑水平']
+			},
+			grid: {
+				left: '3%',
+				right: '4%',
+				bottom: '3%',
+				containLabel: true
+			},
+			xAxis: {
+				type: 'value'
+			},
+			yAxis: {
+				type: 'category',
+				data: ['从不', '1个月或更久', '2-3周', '每周', '4-5天', '2-3天', '每天'],
+				axisLabel: {
+										formatter: '{value} %'
+									},
+			},
+			series: [
+				{
+					name: '低焦虑水平',
+					type: 'bar',
+					stack: 'total',
+					label: {
+						show: true
+					},
+					emphasis: {
+						focus: 'series'
+					},
+					data: [3.76, 4.62, 5.22, 7.42, 6.59, 9.62, 11.98]
+				},
+				{
+					name: '中焦虑水平',
+					type: 'bar',
+					stack: 'total',
+					label: {
+						show: true
+					},
+					emphasis: {
+						focus: 'series'
+					},
+					data: [56.68, 62.23, 69.38, 66.22, 69.65, 67.78, 67.06]
+				},
+				{
+					name: '高焦虑水平',
+					type: 'bar',
+					stack: 'total',
+					label: {
+						show: true
+					},
+					emphasis: {
+						focus: 'series'
+					},
+					data: [39.56, 33.15, 25.40, 26.36, 23.76, 22.60, 20.96]
+				}
+			]
+		};
+
+
+        myChart.setOption(option);
+    </script>
+				<div class="source">
+					<p>数据来源：当代青年焦虑报告<sup>[3]</sup></p>
+				</div>
+				<div>
+				<div class="artilce">
+				<p class="formTitle">运动习惯与睡眠质量的关系</p>
+			    </div>
+				
+						  <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="sleep"></div>
+    <script >
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('sleep'));
+
+        // 指定图表的配置项和数据
+       var option;
+
+		option = {
+		   backgroundColor:'#8E9AAF',
+		   tooltip: {
+				trigger: 'item'
+			},
+			toolbox: {
+								feature: {
+									dataView: {show: true, readOnly: false},
+									saveAsImage: {show: true}
+								}
+							},
+			legend: {
+				orient: 'vertical',
+				left: 'left',
+				
+			},
+			series: [
+				{
+					name: '偶尔运动',
+					type: 'pie',
+					radius: '50%',
+					data: [
+						{value: 0.4229, name: '睡眠质量不高'},
+						{value: 0.3744, name: '睡眠不足严重缺觉'},
+						{value: 0.3529, name: '睡眠质量好精神饱满'},
+
+					],
+					 color:['#DEE2FF', '#FEEAFA', '#EFD3D7'],
+					emphasis: {
+						itemStyle: {    
+							shadowBlur: 10,
+							shadowOffsetX: 0,
+							shadowColor: 'rgba(0, 0, 0, 0.5)',
+							textOutline:'none'
+						}
+					}
+				}
+			]
+		};
+
+
+        myChart.setOption(option);
+    </script>
+				<div class="source">
+					<p>数据来源：运动与睡眠调查报告<sup>[2]</sup></p>
+				</div>
+				<br>
+				<p class="smalltitle">勇敢自信做自己</p>
+				<p class="artilceText">
+					拥抱脆弱和接受不完美都是一个人成熟路上的一道坎儿。只有接受了自己的不完美才有真正的自信，自信的人内心才有真正的力量，这是一切物质的基础，只有做到这一点才能由内而外地散发出独特的个人魅力。真正的奢侈不在于用多贵的包包，而在于拥有一种态度、一种自信：接受自己的不完美，忠于自己的内心，开心地活着。只要拥有了自信，一切便唾手可得，那种自信幸福的磁场是由内而外的光环，完胜所有的奢侈品。自信是治愈焦虑的必要前提。一些对自己没有自信心的人，对自己完成和应付事物的能力是怀疑的，夸大自己失败的可能性，从而忧虑、紧张和恐惧。因此，我们必须自信，减少自卑感。应该相信自己每增加一次自信，焦虑程度就会降低一点，恢复自信，也就是最终驱逐焦虑。
+			  </p>
+				<p class="formTitle">中国女性提高自信的方式</p>
+								  <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="suggest"></div>
+    <script >
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('suggest'));
+
+        // 指定图表的配置项和数据
+				var option;
+
+			option = {
+				tooltip: {
+					trigger: 'item',
+					formatter: "{a} <br/>{b} : {c}%"
+				},
+				toolbox: {
+								feature: {
+									dataView: {show: true, readOnly: false},
+									saveAsImage: {show: true}
+								}
+							},
+
+				legend: {
+					data: ['展现','点击','访问','咨询','订单']
+				},
+
+				series: [
+					{
+						name:'中国女性提高自信的方式',
+						type:'funnel',
+						left: '10%',
+						top: 60,
+						//x2: 80,
+						bottom: 60,
+						width: '80%',
+						// height: {totalHeight} - y - y2,
+						min: 0,
+						max: 100,
+						minSize: '0%',
+						maxSize: '100%',
+						sort: 'descending',
+						gap: 2,
+						label: {
+							show: true,
+							position: 'inside'
+						},
+						labelLine: {
+							length: 10,
+							lineStyle: {
+								width: 1,
+								type: 'solid'
+							}
+						},
+						itemStyle: {
+							borderColor: '#fff',
+							borderWidth: 1
+						},
+						emphasis: {
+							label: {
+								fontSize: 20
+							}
+						},
+						color:['#FFFFFF','#DEE2FF', '#FEEAFA', '#EFD3D7','#FEFFDD'],
+						data: [
+							{value: 42.7, name: '读书'},
+							{value: 70.5, name: '化妆'},
+							{value: 67.1, name: '服饰'},
+							{value: 52.4, name: '运动'},
+							{value: 39.2, name: '微整形'}
+						]
+					}
+				]
+			};
+
+        myChart.setOption(option);
+    </script>
+				<div class="source">
+					<p>数据来源：2018中国女性自信报告<sup>[3]</sup></p>
+				</div>
+				<div class="artilce">
+				<p class="artilceText">
+				如果真的感到困扰，那只能随着你年龄的增长,要尽快去开发自己的灵魂，也就是精神世界;去寻找对于自己的生命来说最重要的事情，在这个事情上自己能够获得自我价值感，满足感和精神快乐。这些东西是超出了生存之上的体验，与物质条件，外在容貌，周遭境遇无关，是没有功利性的;只有找到这些，获得内心的充实和自由，才能体会到幸福。当你的心灵有依托时,会发现对于容貌也就没那么高的要求了。	
+				</p>
+				</div>
+				<div id="develop">
+				<p class="formTitle">中国人提高自信的八大热门方式</p>
+				<img src="img/method.png" alt="提高自信方式" width="500" height="200"/>
+				</div>
+				<div class="source">
+					<p>数据来源：2018中国女性自信报告<sup>[1]</sup></p>
+				</div>
+				<div class="artilce">
+			    <p class="artilceText">中国女性的自信指数与学历呈正相关。在中国，学历越高的女性越自信——知识是很好的化妆品。</p>
+				</div>
+				<p class="formTitle">学历与自信的关系</p>
+										  <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="education"></div>
+    <script >
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('education'));
+
+        // 指定图表的配置项和数据
+				var option;
+
+		option = {
+			backgroundColor:'#8E9AAF',
+			tooltip: {
+				trigger: 'axis',
+				axisPointer: {
+					type: 'cross',
+					label: {
+						backgroundColor: '#6a7985'
+					}
+				}
+			},
+			toolbox: {
+								feature: {
+									dataView: {show: true, readOnly: false},
+									saveAsImage: {show: true}
+								}
+							},
+
+			grid: {
+				left: '3%',
+				right: '4%',
+				bottom: '3%',
+				containLabel: true
+			},
+			xAxis: [
+				{
+					type: 'category',
+					boundaryGap: false,
+					data: ['初中及以下', '高中', '高职高专', '大学本科', '硕士及以上']
+			},
+			],
+			yAxis: [
+				{
+					type: 'value',
+					axisLabel: {
+										formatter: '{value} %'
+									},
+				}
+			],
+			color:['#DEE2FF'],
+			series: [
+				{
+					name: '学历与自信的关系%',
+					type: 'line',
+					stack: '总量',
+					label: {
+						show: true,
+						position: 'top'
+					},
+					areaStyle: {},
+					emphasis: {
+						focus: 'series'
+					},
+					data: [63.64, 65.23, 64.30, 69.50, 72.03]
+				}
+			]
+		};
+
+
+
+        myChart.setOption(option);
+    </script>
+				<div class="source">
+					<p>数据来源：2018中国女性自信报告<sup>[1]</sup></p>
+				</div>
+				<p class="smalltitle">你的容貌不是别人的景观</p>
+				<p class="artilceText">每个人都是芸芸众生中独一无二的审美个体，要对美的概念有更为清醒的认知。千姿百态是人类社会的本来模样，人人都追求美，但没有必要，也更不可能是千人一面。年轻人关注容貌、追求高颜值没有错，但不能因容貌而焦虑。“腹有诗书气自华”，与其花费大量时间、精力追求外貌精致，不如通过规律作息、得体衣着、健康生活、文明举动，用人格魅力来感染他人。</p>
+			</div>
+			<div id="footer"> <!--页脚区域-->
+				<p>
+					<b>数据来源</b>
+					<br>
+					[1]南方周末、新氧&nbsp; 《2018中国女性自信报告》&nbsp; https://mp.weixin.qq.com/s/RphLCKy8_k_t6lP2buNl2w
+					<br>
+					[2]中国青年网 &nbsp; 《运动与睡眠调查报告》 &nbsp;https://wenku.baidu.com/view/bdc658b067ce0508763231126edb6f1aff007197.html
+					<br>
+					[3]豆瓣 &nbsp; 《当代青年焦虑报告》 &nbsp;https://www.douban.com/doulist/112129696/<br><br>
+				</p>
+			联系邮箱：280437859@qq.com&nbsp;丨&nbsp;在线电话：028-90268560&nbsp;丨&nbsp;工作室地址：四川省南充市顺庆区华凤街道西华师范大学
+			</div>
+		</div>
+		</div>
+		<script src="../js/jquery.min.js"></script>  <!--引入的js-->
+		<script>
+			$(window).scroll(function() {
+				
+				if($(window).scrollTop() > 190) {
+					$('.navigation').addClass("sticky");
+				} else {
+					$('.navigation').removeClass("sticky");
+				}
+			
+				if($(window).scrollTop() > 200) {
+					$('.navigation').addClass("offset");
+				} else {
+					$('.navigation').removeClass("offset");
+				}
+			
+				if($(window).scrollTop() > 500) {
+					$('.navigation').addClass("scrolling");
+				} else {
+					$('.navigation').removeClass("scrolling");
+				}
+			
+			});
+		</script><!--jQuery获取滚动的尺寸-->
+	</body>
+</html>
