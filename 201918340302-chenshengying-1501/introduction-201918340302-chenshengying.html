@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh"> <!--网页主要语言为中文简体-->
+	<head>
+		<meta charset="UTF-8">
+		<title>何谓容貌焦虑</title>
+    	<link href="../css/introduction.css" rel="stylesheet" type="text/css"> 
+	</head>
+	<body>
+		<div class="main">
+			<header>
+				<div class="logo">
+				<img src="img/logo.png" alt="网站logo" width="250" height="80"><!--网站logo-->
+			    </div>
+				<nav class="navigation">
+					<ul>
+					<li><a href="../index.html">登录</a></li><!--导航栏区域-->
+                    <li><a href="introduction-201918340302-chenshengying.html">介绍</a></li>
+                    <li><a href="../201918340318-linsiqi-1501/current-201918340318-linsiqi.html">现状</a></li>
+					<li><a href="reason-201918340302-chenshengying.html">原因</a></li>
+					<li><a href="../201918340319-longchangmin-1501/proposal-201918340319-longchangmin.html">建议</a></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="banner">
+				<div id="mainHeading">
+					<h1 class="headline"><!--内容标题-->
+						何谓容貌焦虑
+					</h1>
+				</div>
+				
+			</div>
+			<div class="content"><!--主要内容-->
+				<div id="picture">  <!--图片区域-->
+					<div class="container">  <!--每个图片区域-->
+						<img src="img/first.png" alt="Avatar" class="image">
+						<div class="overlay">  <!--淡入后区域-->
+							<div class="text">我怎么那么丑</div>
+						</div>
+					</div>
+					<div class="container">
+						<img src="img/second.png" alt="Avatar" class="image">
+						<div class="overlay">
+							<div class="text">我脸上好多痘</div>
+						</div>
+					</div>
+					<div class="container">
+						<img src="img/third.png" alt="Avatar" class="image">
+						<div class="overlay">
+							<div class="text">我太矮了</div>
+						</div>
+					</div>
+					<div class="container">
+						<img src="img/fourth.png" alt="Avatar" class="image">
+						<div class="overlay">
+							<div class="text">我没有肌肉</div>
+						</div>
+					</div>
+				</div>
+				<p class="section"> <!--第一段落区域-->
+					我的腿好粗、我的脸好方、我好矮、我眼睛太小了、我长得太丑了......等等这些一系列不正常的心理暗示即是容貌焦虑,它就是指在放大颜值作用的环境下，很多人对于自己的外貌不够自信的一种客观现象。据统计，人们无论在工作中还是生活上都会出现容貌焦虑并且不断地重新“定义”自己。
+				</p>
+				<div class="box">  <!--弹幕区域-->
+					<div class="track">  <!--轨道区域-->
+						<div class="child child-purple">这么丑还出来见人&nbsp;&nbsp;&nbsp;&nbsp;<!--空格-->这腰就像水桶一样&nbsp;&nbsp;&nbsp;&nbsp;颜值即正义</div>
+					</div>
+					<div class="track">
+						<div class="child child-yellow">她也太黑了吧&nbsp;&nbsp;&nbsp;&nbsp;胖得像猪一样&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+					</div>
+					<div class="track">
+						<div class="child child-red">腿那么粗还穿裙子&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;你眼睛好小&nbsp;&nbsp;&nbsp;&nbsp;你不会真没有180吧</div>
+					</div>
+					<div class="track">
+						<div class="child child-orange">&nbsp;&nbsp;&nbsp;&nbsp;快去整容吧&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A4腰&nbsp;&nbsp;&nbsp;&nbsp;学得好不如长得好</div>
+					</div>
+					<div class="track">
+						<div class="child child-pink">&nbsp;&nbsp;你还想当明星&nbsp;&nbsp;&nbsp;&nbsp;精灵耳&nbsp;&nbsp;&nbsp;&nbsp;脂肪填充</div>
+					</div>
+					<div class="track">
+						<div class="child child-green">长得不好看的吃货叫饭桶&nbsp;&nbsp;&nbsp;&nbsp;就这&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这发际线都比天高了</div>
+					</div>
+				</div>
+				<br>  <!--换行-->
+				<br>
+				<br>
+				<p class="section">  <!--段落二区域-->
+					魔镜魔镜告诉我，谁是这个世界上最美的女人......在2021年2月，无效化妆和无效穿搭概念在网络上爆火，并在“无效化妆”被提出后，类似的“无效xx”应接不暇，“无效穿搭”“无效学习”“无效社交”，令人心烦意乱，一种群体的心理现象与医疗方面的催化剂加速了“容貌焦虑”的产生，更有甚者将容貌焦虑内卷到耳朵上去。随着这类所谓的标准的提出，”容貌焦虑“的氛围正不断扩大，不断地向我们蔓延，它无形地潜入人们的潜意识里，让大家为此挣扎而又无法自拔。
+				</p>
+			</div>
+			<div id="footer"> <!--页脚区域-->
+			联系邮箱：280437859@qq.com&nbsp;丨&nbsp;在线电话：028-90268560&nbsp;丨&nbsp;工作室地址：四川省南充市顺庆区华凤街道西华师范大学
+			</div>
+		</div>
+		
+
+		<script src="../js/jquery.min.js"></script>  <!--引入的js-->
+		<script>
+			$(window).scroll(function() {
+				
+				if($(window).scrollTop() > 190) {
+					$('.navigation').addClass("sticky");
+				} else {
+					$('.navigation').removeClass("sticky");
+				}
+			
+				if($(window).scrollTop() > 200) {
+					$('.navigation').addClass("offset");
+				} else {
+					$('.navigation').removeClass("offset");
+				}
+			
+				if($(window).scrollTop() > 500) {
+					$('.navigation').addClass("scrolling");
+				} else {
+					$('.navigation').removeClass("scrolling");
+				}
+			
+			});
+		</script><!--jQuery获取滚动的尺寸-->
+	</body>
+</html>

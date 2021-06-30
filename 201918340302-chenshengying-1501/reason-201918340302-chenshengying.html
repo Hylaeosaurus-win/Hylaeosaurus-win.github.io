@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh"> <!--网页主要语言为中文简体-->
+	<head>
+		<meta charset="UTF-8">
+		<title>谁在制造容貌焦虑</title>
+    	<link href="../css/reason.css" rel="stylesheet">
+		<script src="../js/echarts.min.js"></script>  <!--引入echarts-->
+	</head>
+	<body>
+		<div class="main">
+			<header>
+				<div class="logo">
+				<img src="img/logo.png" alt="网站logo" width="250" height="80"><!--网站logo-->
+			    </div>
+				<nav class="navigation">
+					<ul>
+					<li><a href="../index.html">登录</a></li><!--导航栏区域-->
+                    <li><a href="introduction-201918340302-chenshengying.html">介绍</a></li>
+                    <li><a href="../201918340318-linsiqi-1501/current-201918340318-linsiqi.html">现状</a></li>
+					<li><a href="reason-201918340302-chenshengying.html">原因</a></li>
+					<li><a href="../201918340319-longchangmin-1501/proposal-201918340319-longchangmin.html">建议</a></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="banner">
+				<h1 class="title">  <!--海报标题-->
+					谁在制造
+					<br>  <!--换行-->
+					容貌焦虑
+				</h1>				
+			</div>
+			<div class="content"><!--主要内容-->
+				<br>  <!--换行-->
+				<br>
+				<br>
+				<div id="section">  <!--总结性图文区域-->
+					<p class="paragraph">
+					近日，中青校媒面向全国2063名高校学生就容貌焦虑话题展开问卷调查，结果显示，自卑心理（53.51%）、普遍流行的单调审美（51.68%）、过于期待他人认可（49.39%）、互相攀比的心理（47.51%）是导致容貌焦虑的主要原因。在图中，我们可以了解到，不仅是在心理方面，在现在这个社会当中似乎容貌焦虑不再是一个新鲜的词语，反倒是一个常态，那么出现这种结果的原因是什么呢？接下来就让我们一起解析这当中深层的奥秘。</p>
+				</div>	
+					<h3>容貌焦虑的原因</h3>
+					<div id="pyramid"></div>  <!--金字塔图表区域-->
+					<p class="source">
+						数据来源：中青报中青校媒关于容貌焦虑的调查报告<sup>[1]</sup>
+					</p>
+						<script>
+							// 基于准备好的dom，初始化echarts实例
+							var myChart = echarts.init(document.getElementById('pyramid'));
+							var myChart = echarts.init(pyramid);
+							var option;
+
+							option = {
+								title: {
+									subtext: '单位：%'
+								},
+								tooltip: {
+									trigger: 'item',
+									formatter: "{a} <br/>{b} : {c}%"
+								},
+								toolbox: {
+								feature: {
+									dataView: {show: true, readOnly: false},
+									saveAsImage: {show: true}
+								}
+							},
+								legend: {
+									data: ['自卑心理','普遍流行的单调审美','过于期待他人认可','互相攀比的心理']
+								},
+
+								series: [
+									{
+										name:'类别',
+										type:'funnel',
+										left: '10%',
+										top: 60,
+										//x2: 80,
+										bottom: 60,
+										width: '80%',
+										// height: {totalHeight} - y - y2,
+										min: 0,
+										max: 100,
+										minSize: '0%',
+										maxSize: '100%',
+										sort: 'descending',
+										gap: 2,
+										label: {
+											show: true,
+											position: 'inside'
+										},
+										labelLine: {
+											length: 10,
+											lineStyle: {
+												width: 1,
+												type: 'solid'
+											}
+										},
+										itemStyle: {
+											borderWidth: 0
+										},
+										emphasis: {
+											label: {
+												fontSize: 20
+											}
+										},
+										data: [
+											{value: 53.51, name: '自卑心理'},
+											{value: 51.68, name: '普遍流行的单调审美'},
+											{value: 49.39, name: '过于期待他人认可'},
+											{value: 47.51, name: '互相攀比的心理'}
+										],
+										color:['#FFEAFB','#DEE2FF','#D7D7C3','#A2A3A5']
+									}
+								]
+							};
+
+							option && myChart.setOption(option);
+
+						</script>
+					<div id="explore">  <!--词云上方区域-->
+						<h2>  <!--小标题区域-->
+							容貌焦虑来源于其社会价值
+						</h2>
+						<p class="paragraph">
+							首先，容貌焦虑来源于它本身存在的社会价值。现在的这个社会，不可否认的是“容貌”是有价值存在的，在社会关系当中，容貌会带来一定的先机，在工作中，客户会注意对方的形象；在求职当中，公司有更大的概率选择容貌更好的那一个；当下社交媒介发达，信息传播多元，好看的男性和靓丽的女性可以引来更多的关注，在生活当中的许多方面都会留下容貌价值不可忽视的脚印。在互联网上，更是有不少关于颜值，容貌的段子横冲直撞。
+						</p> 
+					</div>
+					<div class="girl">  <!--词云区域-->
+						<img src="img/cloud1.png" alt="词云" width="350">  <!--插入图片-->
+					</div>
+					<div class="boy">
+						<img src="img/cloud2.png" alt="词云" width="320">
+					</div>
+				 
+				<div id="cloud-paragraph">  <!--第二点一半图文区域-->
+					<p class="paragraph">
+						”颜值就是正义“、”学得好不如长得好“、”我可是颜值主播“......等等这些关于容貌的梗和段子在网上能够迅速传播起来，从而使人们在社会媒体环境当中越来越不自信，越来越觉得自己的容貌不行，特别是在这个“偶像养成”的时代当中掀起了风潮，流量当道，颜值至上，一场又一场的娱乐盛宴，不仅让我们看到了资本的重要性，还有容貌为之带来的流量巨浪与数不尽的好处，因此，人们越来注重自己的容貌，”修剪“自己的身体，从而想要获得利益与价值。
+					</p>
+					<h2>  <!--小标题区域-->
+						容貌焦虑来源于认知因素
+					</h2>
+					<div class="people">  
+						<img src="img/people.png" alt="爱德华" width="260">  <!--插入人物图片-->
+					</div>
+					<div id="speak">  <!--部分滑动区域-->
+						<p class="paragraph">
+							美国著名心理学家爱德华桑戴克与20世纪20年代提出“光环效应”（也叫“晕轮效应”），是指人们对于他人的认知和判断往往只从局部出发，扩散而得出整体印象。桑戴克用一个实验来证明“晕轮效应”的存在。他随机选取了一些人的照片并展示给志愿者看，这些照片上的人有的魅力十足，有的邋遢猥琐，还有的则是毫无特色。然后，桑戴克让志愿者根据照片评价这些人的性格特点。结果表明，被试者对有魅力的人比对无魅力的赋予更多的理想特征，如和蔼、沉着、好交际等。这样的“以貌取人”便是其中的一种。
+						</p>
+					</div>
+				</div>
+				<div class="speak-paragraph">  <!--人物下方区域-->
+					<p class="paragraph">
+						通过时代大数据流量推荐，我们不仅能够了解与认识外面的世界，同时，互联网也能随时随地将世界上最好看的男性和女性形象呈现在我们面前。面对大量优势形象冲击，我们往往不自觉地形成主观印象，认为世界上好看的男性和女性很多，但自己却不是，甚至会觉得自己不好看，让原本对此话题比较敏感的年轻人不停地被周围的信息暗示，碾压了不少相貌平平者的容貌自信心。
+					</p>
+					<p class="paragraph">	
+						当我们点开关键词”容貌焦虑“的微博话题，“你有容貌焦虑吗”“容貌焦虑有多难”“如何解决容貌焦虑”“拒绝容貌焦虑”等数十条热搜话题映入眼帘，并且截止到2021年6月30日为止，相关话题阅读量总数已经超过10亿次，人们讨论”容貌焦虑“于24小时内时间当中也超过了一半，具体数据见下图。
+					</p>
+				</div>
+					<h3>微博“容貌焦虑”相关话题阅读量</h3>  <!--图标标题区域-->
+					<div id="sector"></div>  <!--图表区域-->
+					<p class="source">
+						数据来源：新浪微博<sup>[2]</sup>
+					</p>
+						<script>
+							// 基于准备好的dom，初始化echarts实例
+							var myChart = echarts.init(document.getElementById('sector'));
+							var myChart = echarts.init(sector);
+							var option;
+
+							option = {
+								title: {
+									subtext: '单位：万'
+								},
+								tooltip: {
+									trigger: 'axis',
+									axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+										type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+									}
+								},
+								toolbox: {
+								feature: {
+									dataView: {show: true, readOnly: false},
+									saveAsImage: {show: true}
+								}
+							},
+								grid: {
+									left: '3%',
+									right: '4%',
+									bottom: '3%',
+									containLabel: true
+								},
+								xAxis: [
+									{
+										type: 'category',
+										data: ['你有容貌焦虑吗', '赵薇齐溪谈容貌焦虑', '容貌焦虑对你的影响', '容貌焦虑', '如何解决容貌焦虑', '如何看待容貌焦虑低龄化'],
+										axisTick: {
+											alignWithLabel: true
+										},
+										axisLabel: {
+											interval:0,
+											rotate:15
+										}
+									}
+								],
+								yAxis: [
+									{
+										type: 'value'
+									}
+								],
+								series: [
+									{
+										name: '阅读量',
+										type: 'bar',
+										barWidth: '60%',
+										barGap:'-80%',
+										data: [77000, 30000, 27000, 5854.8, 3434.6, 3022.7],
+										itemStyle: {
+											normal: {
+												color: function(params) {
+													var colorList = ['#DEE2FF','#FFEAFB', '#D7D7C3', '#A2A3A5', '#C0D3BF','#C1BFD3'];
+													return colorList[params.dataIndex]
+												}
+											}
+										}
+
+									}
+								]
+							};
+
+							option && myChart.setOption(option);
+
+						</script>
+				
+					<h3>
+						微博"容貌焦虑"话题24小时讨论趋势
+					</h3>
+					<div id="line"></div>  <!--图表区域-->
+					<p class="source">
+						数据来源：新浪微博<sup>[3]</sup>
+					</p>
+					<script>
+						// 基于准备好的dom，初始化echarts实例
+						var myChart = echarts.init(document.getElementById('line'));
+						var myChart = echarts.init(line);
+						var option;
+
+						option = {
+							title: {
+										subtext: '以2021年6月29日16:00-2021年6月30日15:00数据为例 单位：个'
+								
+									},
+									tooltip: {
+										trigger: 'axis',
+										axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+											type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+										}
+									},
+									toolbox: {
+									feature: {
+										dataView: {show: true, readOnly: false},
+										saveAsImage: {show: true}
+									}
+								},
+							xAxis: {
+								type: 'category',
+								data: ['16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00']
+							},
+							yAxis: {
+								type: 'value'
+							},
+							series: [{
+								data: [2, 0, 5, 4,7, 5, 3,5, 3, 2, 1, 0, 0, 0, 1, 1, 0, 5, 0, 3, 1, 7, 4, 4, 3],
+								type: 'line',
+								itemStyle : {
+									normal : {
+										color:'#F0D3D7',
+										lineStyle:{
+											color:'#F0D3D7'
+										}
+									}
+								},
+							}],
+						};
+
+						option && myChart.setOption(option);
+
+					</script>
+				<div id="picture-paragraph">
+					<h2>  <!--小标题区域-->
+						容貌焦虑来源于医美行业的宣传炒作
+					</h2>
+					<p class="paragraph">
+						医美行业原本是满足一些人矫正生理缺陷的需要，但随着其适用范围扩大，向人们不间断传递出“形象可以通过自我努力加以塑造”的观念，大炒美容整形的效果，夸大容貌对金钱、就业、社交影响，随着宣传力度的扩大，我们能够在手机媒体，交通工具，广告牌......等各种媒介中看见这种营销暗示、催生和放大了人们的容貌焦虑。更是内卷着夸大着医美行业的技术能力成熟，性价比高，更加促使了人们产生容貌焦虑。
+					</p>
+				</div>
+				<div class="gather">  <!--插入图片-->
+						<img src="img/gather.jpg" alt="图集" width="750">
+				</div>
+			</div>
+			<div id="footer"> <!--页脚区域-->
+				<b>数据来源</b><br>
+					[1]中青报&nbsp;《“我们都不完美，但又都各自美丽着。”》&nbsp;http://news.cyol.com/gb/articles/2021-06/30/content_WNwRmfL9m.html
+					[2]新浪微博手机端“容貌焦虑”话题,~2021-6-30<br>
+					[3]新浪微博手机端“容貌焦虑”话题指数，2021-6-29~2021-6-30<br><br>
+				联系邮箱：280437859@qq.com&nbsp;丨&nbsp;在线电话：028-90268560&nbsp;丨&nbsp;工作室地址：四川省南充市顺庆区华凤街道西华师范大学
+			</div>
+		</div>
+		<script src="../js/jquery.min.js" ></script>
+		<script>
+			$(window).scroll(function() {
+				
+				if($(window).scrollTop() > 190) {
+					$('.navigation').addClass("sticky");
+				} else {
+					$('.navigation').removeClass("sticky");
+				}
+			
+				if($(window).scrollTop() > 200) {
+					$('.navigation').addClass("offset");
+				} else {
+					$('.navigation').removeClass("offset");
+				}
+			
+				if($(window).scrollTop() > 500) {
+					$('.navigation').addClass("scrolling");
+				} else {
+					$('.navigation').removeClass("scrolling");
+				}
+			
+			});
+		</script><!--jQuery获取滚动的尺寸-->
+	</body>
+</html>
