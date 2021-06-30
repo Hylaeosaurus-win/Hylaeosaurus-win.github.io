@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<!-- 引入 ECharts 文件 -->
+   		<script src="../js/echarts.min.js"></script>
+		<title>泛滥的容貌焦虑</title>
+    	<link href="../css/current.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="main">
+			<header>
+				<div class="logo">
+				<img src="img/logo.png" alt="网站logo" width="250" height="80"><!--网站logo-->
+			    </div>
+				<nav class="navigation">
+					<ul>
+					<!--导航栏区域-->
+					<li><a href="../index.html">登录</a></li>
+					<li><a href="../201918340302-chenshengying-1501/introduction-201918340302-chenshengying.html">介绍</a></li>
+					<li><a href="current-201918340318-linsiqi.html">现状</a></li>
+					<li><a href="../201918340302-chenshengying-1501/reason-201918340302-chenshengying.html">原因</a></li>
+					<li><a href="../201918340319-longchangmin-1501/proposal-201918340319-longchangmin.html">建议</a></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="banner">
+				<h1 class="title">
+				  	<!--内容标题-->
+					泛滥的容貌焦虑</h1>
+			</div>
+			<!--主要内容-->
+			<div class="content">
+				<h2>容貌焦虑在蔓延</h2>
+				<div class="text">
+					<p>“容貌焦虑”似乎并非是近几年才出现的词语，其实，每个人都或多或少存在着自己不满意的地方。2015年“亚洲四大邪术”——泰国变形、韩国整容、日本化妆、中国ps飞速走红网络，这也证明着早在2015年前大家就想尽了各种方法来让自己变美，容貌焦虑这一现象普遍存在社会生活中。</p>
+					<p>传播学中有一个理论名为“镜中我”理论，它的具体内容是，人的行为很大程度取决于自我认知，而自我认知主要通过他人对自己的评价、态度构成，他人的评价、态度，就像反映自我的镜子，人们通过这个镜子来认识、把握自我。网络时代，这面镜子变得更大，容貌焦虑的范围也越来越广。</p>
+				</div>
+				<div class="textTitle">
+					<h2>我长得到底好不好看</h2>
+				</div>
+				<div class="text">
+					<p>就在今年中青校媒面向大学生进行了容貌焦虑相关的社会调查，调查发现，平均55.29%的受访大学生给自己的容貌打3分，认为自己容貌一般，24.73%对自身容貌较为满意，打出4分，仅有7.87%表示十分满意，选择满分5分。数据显示，仅有1.73%的女生给自己的容貌打1分，而有4.97%的男生对自己容貌非常不满意。而男生（12.77%）对自己的容貌非常满意的比例高于女生（6.08%）。</p>
+				</div>
+				<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+				<!--大学生容貌的自我评价图表-->
+				<h3>大学生容貌自评</h3>
+				<div id="evaluation">
+					<script>
+						var myChart = echarts.init(evaluation);
+						var option;
+
+						option = {
+							toolbox: {
+								feature: {
+									dataView: {show: true, readOnly: false},
+									saveAsImage: {show: true}
+								}
+							},
+							legend: {},
+							tooltip: {},
+							dataset: {
+								source: [
+									['product', '男', '女'],
+									 ['1分', 4.97,1.73],
+									['2分', 7.57,10.25],
+									['3分', 52.1,56.5],
+									['4分', 22.72,25.51],
+									['5分', 12.77,6.08]
+								]
+							},
+							xAxis: {type: 'category'},
+							yAxis: {
+								axisLabel: {
+											formatter: '{value} %'
+										},
+							},
+							// Declare several bar series, each will be mapped
+							// to a column of dataset.source by default.
+							series: [
+								{type: 'bar',color:['#CBC0D3']},
+								{type: 'bar',color:['#EFD3D7']}
+							]
+						};
+
+						option && myChart.setOption(option);
+					</script>
+				</div>
+				<p class="source">数据来源：中青报中青校媒关于容貌焦虑的调查报告<sup>[1]</sup></p>
+				<div class="textTitle">
+					<h2>泛滥的容貌焦虑</h2>
+				</div>
+				<div class="text">
+					<p>对于长相和身材，59.03%的大学生存在一定程度的容貌焦虑。其中，男生（9.09%）中严重容貌焦虑的比例比女生（3.94%）还高，而女生（59.67%）中度焦虑的比例高于男生（37.14%）。</p>
+				</div>
+				<!--大学生是否有容貌焦虑的图表-->
+				<h3>大学生关于于容貌焦虑程度的调查</h3>
+				<div id="barChart">
+					<script>
+						var myChart = echarts.init(barChart);
+						var option;
+
+						option = {
+							tooltip: {
+								trigger: 'axis',
+								axisPointer: {
+									type: 'cross',
+									label: {
+										backgroundColor: '#6a7985'
+									}
+								}
+							},
+							legend: {
+								data: ['男', '女']
+							},
+							toolbox: {
+								feature: {
+									dataView: {show: true, readOnly: false},
+									saveAsImage: {}
+								}
+							},
+							grid: {
+								left: '3%',
+								right: '4%',
+								bottom: '3%',
+								containLabel: true
+							},
+							xAxis: [
+								{
+									type: 'category',
+									boundaryGap: false,
+									data: ['无感', '比较敏感', '非常焦虑']
+								}
+							],
+							yAxis: [
+								{
+									type: 'value',
+									axisLabel: {
+										formatter: '{value} %'
+									},
+								}
+							],
+							series: [
+								{
+									name: '男',
+									type: 'line',
+									stack: '总量',
+									color:['#DEE2FF'],
+									areaStyle: {},
+									emphasis: {
+										focus: 'series'
+									},
+									data: [53.77,37.14,9.09]
+								},
+								{
+									name: '女',
+									type: 'line',
+									stack: '总量',
+									color:['#FEEAFA'],
+									areaStyle: {},
+									emphasis: {
+										focus: 'series'
+									},
+									data: [36.39,59.67,3.94]
+								}
+							]
+						};
+
+						option && myChart.setOption(option);
+					</script>
+				</div>
+				<p class="source">数据来源：中青报中青校媒关于容貌焦虑的调查报告<sup>[1]</sup></p>
+				<div class="textTitle">
+					<h2>你接受医美吗</h2>
+				</div>
+				<div class="text">
+					<p>随着大众对容貌要求的不断提升，消费市场多元化升级，越来越多的美容、皮肤管理、医美项目应运而生。受访大学生中平均45.95%表示自己可以适当美容；30.84%表示接受清洁和刷酸等基础医美项目（女生37.36%，男生12.57%）；只有15.27%表示坚决拒绝美容和医美项目（女生9.81%，男生30.56%）；有7.94%受访者表示能接受各种类型的医美项目。</p>
+				</div>
+				<!--大学生对于医美态度的图表-->
+				<h3>大学生对于医美态度的调查</h3>
+				<div id="attitude">
+					<script>
+						var myChart = echarts.init(attitude);
+						var option;
+
+						option = {
+							toolbox: {
+								feature: {
+									dataView: {show: true, readOnly: false},
+									saveAsImage: {show: true}
+								}
+							},
+							tooltip: {
+								trigger: 'axis',
+								axisPointer: {            // Use axis to trigger tooltip
+									type: 'shadow'        // 'shadow' as default; can also be 'line' or 'shadow'
+								}
+							},
+							legend: {
+								data: ['所有都能接受', '适度医美', '只接受美容', '坚决拒绝']
+							},
+							grid: {
+								left: '3%',
+								right: '4%',
+								bottom: '3%',
+								containLabel: true
+							},
+							xAxis: {
+								type: 'value',
+								axisLabel: {
+										formatter: '{value} %'
+									},
+							},
+							yAxis: {
+								type: 'category',
+								data: ['男', '女']
+							},
+							series: [
+								{
+									name: '所有都能接受',
+									type: 'bar',
+									stack: 'total',
+									color:['#A2A3A5'],
+									label: {
+										show: true
+									},
+									emphasis: {
+										focus: 'series'
+									},
+									data: [9.67,7.32]
+								},
+								{
+									name: '适度医美',
+									type: 'bar',
+									stack: 'total',
+									color:['#CBC0D3'],
+									label: {
+										show: true
+									},
+									emphasis: {
+										focus: 'series'
+									},
+									data: [12.57,37.36]
+								},
+								{
+									name: '只接受美容',
+									type: 'bar',
+									stack: 'total',
+									color:['#FEEAFA'],
+									label: {
+										show: true
+									},
+									emphasis: {
+										focus: 'series'
+									},
+									data: [47.20,45.51]
+								},
+								{
+									name: '坚决拒绝',
+									type: 'bar',
+									stack: 'total',
+									color:['#EFD3D7'],
+									label: {
+										show: true
+									},
+									emphasis: {
+										focus: 'series'
+									},
+									data: [30.56,9.81]
+								}
+							]
+						};
+
+						option && myChart.setOption(option);
+					</script>
+				</div>
+				<p class="source">数据来源：中青报中青校媒关于容貌焦虑的调查报告<sup>[1]</sup></p>
+				<div class="textTitle">
+					<h2>逐步扩大的医美市场</h2>
+				</div>
+				<div class="text">
+					<p>近年来医美行业也飞速发展，这也一定程度上反映了人们容貌焦虑的程度。“整容脸”越来越普遍，甚至整容也出现低龄化的现象。</p>
+					<p>2019年中国医疗美容市场规模达到1769亿元，增长率放缓至 22.2%；2019年中国医美用户1367.2万人，预测2023年医美用户达2548.3万人。这几年间，行业高速发展，大量机构涌现，且受网红文化影响，消费者需求爆发。2018年为行业发展平缓的转折点。从需求侧看，消费者难以识别合法机构与医生，一部分潜在消费者仍对事故频发的医美持观望状态；从供给侧看，民营医疗美容机构因医疗、运营人才缺失导致获客难、客情难维系等问题。2020年受疫情影响，行业发展略受影响，数据预测预测经过未来3-5年的行业自我调整与变革，市场将逐步回暖。</p>
+				</div>
+				<!--医美行业规模的图表-->
+				<h3>2016年起医美行业规模变化趋势</h3>
+    			<div id="histogram">
+					<script>
+						var myChart = echarts.init(histogram);
+						var option;
+
+						option = {
+							tooltip: {
+								trigger: 'axis',
+								axisPointer: {
+									type: 'cross',
+									crossStyle: {
+										color: '#999'
+									}
+								}
+							},
+							toolbox: {
+								feature: {
+									dataView: {show: true, readOnly: false},
+									magicType: {show: true, type: ['line', 'bar']},
+									restore: {show: true},
+									saveAsImage: {show: true}
+								}
+							},
+							legend: {
+								data: ['中国医疗美容市场规模', '增速']
+							},
+							xAxis: [
+								{
+									type: 'category',
+									data: ['2016', '2017', '2018', '2019', '2020', 'e2021'],
+									axisPointer: {
+										type: 'shadow'
+									}
+								}
+							],
+							yAxis: [
+								{
+									type: 'value',
+									name: '市场规模',
+									min: 0,
+									max: 250,
+									interval:50,
+									axisLabel: {
+										formatter: '{value} 十亿元'
+									}
+								},
+								{
+									type: 'value',
+									name: '增速',
+									min: 0,
+									max: 40,
+									interval: 5,
+									axisLabel: {
+										formatter: '{value} %'
+									}
+								}
+							],
+							series: [
+								{
+									name: '中国医疗美容市场规模',
+									type: 'bar',
+									//改变图表颜色
+            						color:['#CBC0D3'],
+									data: [84.1,112.4,144.8,176.9,197.5,227.4]
+								},
+								{
+									name: '增速',
+									type: 'line',
+									yAxisIndex: 1,
+									color:['#DEE2FF'],
+									data: [29.9,33.7,28.8,22.2,11.6,15.1]
+								}
+								
+							]
+						};
+
+						option && myChart.setOption(option);
+
+					</script>
+				</div>
+				<p class="source">数据来源：艾瑞咨询研究院整合<sup>[2]</sup></p><br>
+				<div class="text">
+					<p>随着网络时代的飞速发展，大数据向大家推送这各种各样的美女帅哥，仿佛人均颜值都非常高，这就导致普通群众容貌焦虑程度的大大增加。跟着网红、主播的卖货视频或者直播，网络不断地输出着对于“美丽”的各种定义，到底自己美不美丽，可能很少有人能够给出明确的答案，容貌焦虑这种现象也随之泛滥。</p>
+				</div>
+			</div>
+			<!--页脚区域-->
+				<div id="footer"> 
+					<b>数据来源</b><br>
+					[1]中青报&nbsp;《“我们都不完美，但又都各自美丽着。”》&nbsp;http://news.cyol.com/gb/articles/2021-06/30/content_WNwRmfL9m.html<br>
+					[2]艾瑞&nbsp;《中国医美行业趋势研究报告》&nbsp;http://report.iresearch.cn/wx/report.aspx?id=3459<br><br>
+					联系邮箱：280437859@qq.com&nbsp;丨&nbsp;在线电话：028-90268560&nbsp;丨&nbsp;工作室地址：四川省南充市顺庆区华凤街道西华师范大学
+				</div>
+		</div>
+		
+	
+		<script src="../js/jquery.min.js"></script>
+		<script>
+			$(window).scroll(function() {
+				
+				if($(window).scrollTop() > 190) {
+					$('.navigation').addClass("sticky");
+				} else {
+					$('.navigation').removeClass("sticky");
+				}
+			
+				if($(window).scrollTop() > 200) {
+					$('.navigation').addClass("offset");
+				} else {
+					$('.navigation').removeClass("offset");
+				}
+			
+				if($(window).scrollTop() > 500) {
+					$('.navigation').addClass("scrolling");
+				} else {
+					$('.navigation').removeClass("scrolling");
+				}
+			
+			});
+		</script><!--jQuery获取滚动的尺寸-->
+	</body>
+</html>
